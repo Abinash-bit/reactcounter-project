@@ -7,18 +7,26 @@ function App() {
   let [counter, setCounter] = useState(5)
 
   const addValue = () => {
-    setCounter(counter+1)
-    console.log("added value", counter)
+    counter = counter + 1;
+    if(counter < 20){
+      setCounter(counter)
+    }
+    else
+    console.log("Can't increase more than 20", counter)
   }
 
   const removeValue = () => {
-    setCounter(counter-1)
-    console.log("Removed Value", counter)
+    counter = counter - 1
+    if(counter > 0){
+      setCounter(counter)
+    }
+    else
+    console.log("Can't decrease below zero", counter)
   }
 
   return (
     <>
-    <h1>Chai Aur React</h1>
+    <h1>ChatGPT</h1>
     <h2>Counter Value {counter}</h2>
     <button
     onClick={addValue}>Add Value</button>
