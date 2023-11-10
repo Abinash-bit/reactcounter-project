@@ -12,7 +12,7 @@ function App() {
       setCounter(counter)
     }
     else
-    console.log("Can't increase more than 20", counter)
+    console.log("Can't increase more than 20")
   }
 
   const removeValue = () => {
@@ -21,7 +21,7 @@ function App() {
       setCounter(counter)
     }
     else
-    console.log("Can't decrease below zero", counter)
+    console.log("Can't decrease below zero")
   }
 
   return (
